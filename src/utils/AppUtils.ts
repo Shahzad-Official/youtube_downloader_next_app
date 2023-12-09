@@ -3,7 +3,7 @@
 export default async function downloadFile(url: string, fileName: string,isMp3:boolean) {
 
   
-  const response = await fetch(`https://youtube-downloaders.com/api/proxy`, {
+  const response = await fetch(`https://api.youtube-downloaders.com/api/proxy`, {
     method:"post",
     headers: {
       "Content-Type": "application/json",

@@ -9,7 +9,7 @@ export default async function fetchData({
   isMp3?: boolean;
 }) {
   try {
-    const response = await fetch("https://youtube-downloaders.com/api/yt", {
+    const response = await fetch("https://api.youtube-downloaders.com/api/yt", {
       cache:"no-cache",
       method: "post",
       headers: {
