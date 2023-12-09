@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root{
+    --background-color:#ffffff;
+    --text-color:#000000;
+    --primary-color:#ff0000;
+    --footer-color:#dddddd;
+    --button-color:red;
+    --button-text-color:white;
+}
+body{
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+.mt-5{
+    margin-top: 15px;
+}
+a{
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+button{
+    border: none;
+}
+.buttonLoader{
+    color: var(--text-color);
+}
+.loader{
+    color: var(--primary-color);
+}

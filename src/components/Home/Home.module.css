@@ -1,0 +1,152 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 20px 50px 20px;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.searchSection {
+  width: 80%;
+  padding: 20px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.searchArea {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.inputArea {
+  width: 100%;
+  position: relative;
+  display: flex;
+  height: 55px;
+}
+.input {
+  width: 100%;
+  border-radius: 30px 0px 0px 30px;
+  padding-right: 80px;
+  border: 1.5px solid grey;
+  padding-left: 15px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.pasteIcon {
+  cursor: pointer;
+  background-color: white;
+  position: absolute;
+  right: 10px;
+  align-self: center;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  color: black;
+  box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.423);
+}
+.pasteIcon:hover {
+  scale: 1.05;
+}
+.button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 55px;
+  background-color: var(--button-color);
+  border-radius: 0px 30px 30px 0px;
+  color: var(--button-text-color);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.arrowIcon{
+    font-size: 23px;
+    margin-left: 10px;
+    color: var(--button-text-color);
+}
+.h1{
+  text-align: center;
+}
+.downloadOptions{
+  display: flex;
+  flex-direction: row;
+  /* background-color: rebeccapurple; */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 70%;
+  padding: 25px;
+}
+.imageArea{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  /* background-color: aqua; */
+}
+.image{
+  height: auto;
+  width: 100%;
+}
+.title{
+  padding: 10px;
+  
+}
+.optionsArea{
+  display: flex;
+  flex: 1;
+  /* background-color: red; */
+}
+@media screen and (max-width: 767px) {
+   .h1{
+    font-size: 28px;
+  }
+    .pasteIcon{
+        right: 25px;
+    }
+  .searchSection {
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .searchArea{
+    width: 80%;
+  }
+  .downloadOptions{
+    width: 80%;
+    flex-direction: column;
+  }
+  .button {
+    margin-top: 20px;
+    border-radius: 30px;
+  }
+  .input {
+    border-radius: 30px;
+  }
+}
+
+
+.myTable {
+  margin-left: 10px;
+  width: 100%;
+  height: fit-content;
+  border-collapse: collapse;
+}
+
+.myTable th, .myTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.myTable th {
+  background-color: #f2f2f2;
+  text-align: center;
+}
