@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Drawer.module.css";
 import useDrawerState from "../../../hooks/useDrawer";
 import Link from "next/link";
@@ -19,7 +19,6 @@ function Drawer() {
   const { isOpen, close, toggle } = useDrawerState();
   const { changeIndex } = useHeader();
 
-  const currentIndex = localStorage.getItem("currentIndex");
 
   const items = [
     {
@@ -48,7 +47,14 @@ function Drawer() {
       icon: <FontAwesomeIcon icon={faPhone} />,
     },
   ];
+  const [currentIndex, setCurrentIndex] = useState<string|null>("-1");
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const storedIndex = localStorage.getItem("currentIndex");
+      setCurrentIndex(storedIndex );
+    }
+  }, []);
   return (
     <div
       className={`${isOpen ? styles.open : ""} ${styles.parent}`}

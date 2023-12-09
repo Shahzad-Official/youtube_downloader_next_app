@@ -13,9 +13,9 @@ import useHeader from "@/hooks/useHeader";
 import { useRouter } from "next/navigation";
 
 function Header() {
-  const router=useRouter();
-  const currentIndex=localStorage.getItem("currentIndex");
-  const {  changeIndex } = useHeader();
+  const router = useRouter();
+
+  const { changeIndex } = useHeader();
 
   const items = [
     {
@@ -34,7 +34,14 @@ function Header() {
       icon: <FontAwesomeIcon icon={faFileAudio} />,
     },
   ];
+  const [currentIndex, setCurrentIndex] = useState<string|null>("-1");
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const storedIndex = localStorage.getItem("currentIndex");
+      setCurrentIndex(storedIndex );
+    }
+  }, []);
   return (
     <div className={styles.parent}>
       <div className={styles.insideDiv}>
