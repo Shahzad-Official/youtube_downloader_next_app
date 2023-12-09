@@ -6,6 +6,8 @@
     "dev": "next dev -p 4400",
     "build": "next build",
     "start": "next start -p 4400",
+    "pm2":"pm2 start npm --name 'youtube_downloader' -- start",
+    "kill":"pm2 delete youtube_downloader",
     "lint": "next lint"
   },
   "dependencies": {
