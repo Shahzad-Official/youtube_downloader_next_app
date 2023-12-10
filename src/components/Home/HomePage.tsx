@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { ReactNode, useEffect, useRef, useState } from "react";
 import Layout from "../Layout/Layout";
 import styles from "./Home.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,13 +15,20 @@ import { HashLoader, PulseLoader } from "react-spinners";
 import AppColors from "@/utils/AppColors";
 import DownloadButton from "./DownloadButton/DownloadButton";
 import { toast } from "react-toastify";
+import Articles from "./Articles/Articles";
 interface HomeProps {
   isMp3?: boolean;
   isShort?: boolean;
   title?: string;
+  children?: ReactNode;
 }
 
-function HomePage({ isMp3 = false, title, isShort = false }: HomeProps) {
+function HomePage({
+  isMp3 = false,
+  title,
+  isShort = false,
+  children,
+}: HomeProps) {
   const [data, setData] = useState<YoutubeModel | undefined | null>(null);
   const [isLoading, setLoading] = useState(false);
   const [inputVal, setInputVal] = useState("");
@@ -79,106 +86,118 @@ function HomePage({ isMp3 = false, title, isShort = false }: HomeProps) {
   }, [data]);
   return (
     <Layout>
-      <div className={styles.home}>
-        <span className="mt-5" />
-        <h1 className={styles.h1}>{title ?? "YouTube Downloader"}</h1>
-        <div className={styles.searchSection}>
-          <div className={styles.searchArea}>
-            <div className={styles.inputArea}>
-              <input
-                ref={inputRef}
-                id="input"
-                value={inputVal}
-                className={styles.input}
-                type="text"
-                autoFocus
-                onChange={handleInputChange}
-              />
-              <FontAwesomeIcon
-                onClick={pasteData}
-                className={styles.pasteIcon}
-                icon={faPaste}
-              />
-            </div>
-          </div>
-          <div className={` ${isLoading ? styles.button : ""}`}>
-            {isLoading ? (
-              <PulseLoader color={AppColors.backgroundColor} />
-            ) : (
-              <button
-                onClick={handleStart}
-                className={` ${styles.button}`}
-                type="submit"
-              >
-                Start &nbsp;
-                <FontAwesomeIcon
-                  className={styles.arrowIcon}
-                  icon={faArrowRight}
-                  size={"sm"}
+      <div className={styles.parent}>
+        <div className={styles.home}>
+          <span className="mt-5" />
+          <h1 className={styles.h1}>{title ?? "YouTube Downloader"}</h1>
+          <div className={styles.searchSection}>
+            <div className={styles.searchArea}>
+              <div className={styles.inputArea}>
+                <input
+                  ref={inputRef}
+                  id="input"
+                  value={inputVal}
+                  className={styles.input}
+                  type="text"
+                  autoFocus
+                  onChange={handleInputChange}
                 />
-              </button>
-            )}
-          </div>
-        </div>
-
-        {data == null || data === undefined ? (
-          <div />
-        ) : isLoading ? (
-          <HashLoader color={AppColors.primaryColor} />
-        ) : (
-          <div className={styles.downloadOptions}>
-            <div className={styles.imageArea}>
-              <Image
-                width={100}
-                height={100}
-                className={styles.image}
-                src={data.thumbnail}
-                alt="Youtube Video Thumbnail"
-              />
-              <h4 className={styles.title}>{data.title}</h4>
+                <FontAwesomeIcon
+                  onClick={pasteData}
+                  className={styles.pasteIcon}
+                  icon={faPaste}
+                />
+              </div>
             </div>
-            <div className={styles.optionsArea}>
-              <table className={styles.myTable}>
-                <thead>
-                  <tr>
-                    <th>Quality</th>
-                    <th>FileSize</th>
-                    <th>Download</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {data.formats.map((value, index) => {
-                    return (
-                      <tr key={index}>
-                        <td>
-                          (.{value.extension}) &nbsp;{value.quality} &nbsp;
-                          {isMp3 || value.hasAudio ? (
-                            <span />
-                          ) : (
-                            <FontAwesomeIcon
-                              color={AppColors.primaryColor}
-                              icon={faVolumeXmark}
+            <div className={` ${isLoading ? styles.button : ""}`}>
+              {isLoading ? (
+                <PulseLoader color={AppColors.backgroundColor} />
+              ) : (
+                <button
+                  onClick={handleStart}
+                  className={` ${styles.button}`}
+                  type="submit"
+                >
+                  Start &nbsp;
+                  <FontAwesomeIcon
+                    className={styles.arrowIcon}
+                    icon={faArrowRight}
+                    size={"sm"}
+                  />
+                </button>
+              )}
+            </div>
+          </div>
+
+          {data == null || data === undefined ? (
+            <div />
+          ) : isLoading ? (
+            <HashLoader color={AppColors.primaryColor} />
+          ) : (
+            <div className={styles.downloadOptions}>
+              <div className={styles.imageArea}>
+                <Image
+                  width={100}
+                  height={100}
+                  className={styles.image}
+                  src={data.thumbnail}
+                  alt="Youtube Video Thumbnail"
+                />
+                <h4 className={styles.title}>{data.title}</h4>
+              </div>
+              <div className={styles.optionsArea}>
+                <table className={styles.myTable}>
+                  <thead>
+                    <tr>
+                      <th>Quality</th>
+                      <th>FileSize</th>
+                      {isMp3 ? null : <th>Preview</th>}
+                      <th>Download</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {data.formats.map((value, index) => {
+                      return (
+                        <tr key={index}>
+                          <td>
+                            (.{value.extension}) &nbsp;{value.quality} &nbsp;
+                            {isMp3 || value.hasAudio ? (
+                              <span />
+                            ) : (
+                              <FontAwesomeIcon
+                                color={AppColors.primaryColor}
+                                icon={faVolumeXmark}
+                              />
+                            )}
+                          </td>
+                          <td>{value.fileSize} mb</td>
+                          {isMp3 ? null : (
+                            <DownloadButton
+                              fileName={`${data.videoId}.${value.extension}`}
+                              url={value.url}
+                              isMp3
                             />
                           )}
-                        </td>
-                        <td>{value.fileSize} mb</td>
 
-                        <td>
-                          <DownloadButton
-                            url={value.url}
-                            fileName={`${data.videoId}.${value.extension}`}
-                            isMp3={isMp3}
-                          />
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
+                          <td>
+                            <DownloadButton
+                              url={value.url}
+                              fileName={`${data.videoId}.${value.extension}`}
+                              isMp3={isMp3}
+                            />
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
             </div>
-          </div>
-        )}
-        <span className="mt-5" />
+          )}
+          <span className="mt-5" />
+        </div>
+        {children}
+        <Articles />
       </div>
     </Layout>
   );

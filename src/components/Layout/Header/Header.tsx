@@ -34,13 +34,30 @@ function Header() {
       icon: <FontAwesomeIcon icon={faFileAudio} />,
     },
   ];
-  const [currentIndex, setCurrentIndex] = useState<string|null>("-1");
+  const [currentIndex, setCurrentIndex] = useState<string | null>("-1");
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const storedIndex = localStorage.getItem("currentIndex");
-      setCurrentIndex(storedIndex );
+      let storedIndex: string | null;
+      if (location.pathname === "/") {
+        changeIndex(-1);
+      } else if (location.pathname === items[0].href) {
+        changeIndex(0);
+      } else if (location.pathname === items[1].href) {
+        changeIndex(1);
+      } else if (location.pathname === items[2].href) {
+        changeIndex(2);
+      } else if (location.pathname === "/about") {
+        changeIndex(3);
+      } else if (location.pathname === "/contact") {
+        changeIndex(4);
+      }else{
+        changeIndex(111);
+      }
+      storedIndex = localStorage.getItem("currentIndex");
+      setCurrentIndex(storedIndex);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <div className={styles.parent}>

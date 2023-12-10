@@ -1,7 +1,11 @@
-.home {
+.parent {
   display: flex;
   flex-direction: column;
   margin: 50px 20px 50px 20px;
+}
+.home {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   border-radius: 15px;
   box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.2);
@@ -67,15 +71,15 @@
   font-weight: 600;
 }
 
-.arrowIcon{
-    font-size: 23px;
-    margin-left: 10px;
-    color: var(--button-text-color);
+.arrowIcon {
+  font-size: 23px;
+  margin-left: 10px;
+  color: var(--button-text-color);
 }
-.h1{
+.h1 {
   text-align: center;
 }
-.downloadOptions{
+.downloadOptions {
   display: flex;
   flex-direction: row;
   /* background-color: rebeccapurple; */
@@ -84,42 +88,41 @@
   width: 70%;
   padding: 25px;
 }
-.imageArea{
+.imageArea {
   display: flex;
   flex-direction: column;
   flex: 1;
   /* background-color: aqua; */
 }
-.image{
+.image {
   height: auto;
   width: 100%;
 }
-.title{
+.title {
   padding: 10px;
-  
 }
-.optionsArea{
+.optionsArea {
   display: flex;
   flex: 1;
   /* background-color: red; */
 }
 @media screen and (max-width: 767px) {
-   .h1{
+  .h1 {
     font-size: 28px;
   }
-    .pasteIcon{
-        right: 25px;
-    }
+  .pasteIcon {
+    right: 25px;
+  }
   .searchSection {
     width: 90%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .searchArea{
+  .searchArea {
     width: 80%;
   }
-  .downloadOptions{
+  .downloadOptions {
     width: 80%;
     flex-direction: column;
   }
@@ -132,7 +135,6 @@
   }
 }
 
-
 .myTable {
   margin-left: 10px;
   width: 100%;
@@ -140,7 +142,8 @@
   border-collapse: collapse;
 }
 
-.myTable th, .myTable td {
+.myTable th,
+.myTable td {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: left;

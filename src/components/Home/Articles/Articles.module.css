@@ -1,0 +1,65 @@
+.parent{
+    margin: 15px;
+    width: 70%;
+    align-self: center;
+    /* background-color: aqua;  */
+}
+
+.parent p{
+    line-height: 1.5;
+    word-spacing: 3px;
+    margin-left: 15px;
+}
+.parent h2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.parent h3{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    text-align: center;
+    align-items: center;
+}
+.howToDownload{
+    margin-top: 30px;
+}
+.howToDownload h4 {
+    margin-left: 15px;
+    color: rgb(94, 94, 94);
+}
+.steps{
+    display: flex;
+    flex-direction: row;
+}
+.image{
+    background-color: rgb(55, 40, 70);
+    margin: auto;
+    width: 50%;
+    height: auto;
+    gap: 10px;
+}
+.imageRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.imageBox{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+
+@media screen and (max-width:767px) {
+    .parent{
+        width: 90%;
+    }
+    .image{
+        width: 80%;
+    }
+    .imageRow{
+        flex-direction: column;
+    }
+}
