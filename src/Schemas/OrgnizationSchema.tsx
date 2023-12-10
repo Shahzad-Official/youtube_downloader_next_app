@@ -7,7 +7,7 @@ function OrgnizationSchema() {
     <Helmet>
     <script type="application/ld+json">
       {JSON.stringify(
-        `"@context": "https://schema.org",
+       { "@context": "https://schema.org",
       "@type": "Organization",
       "name": "YouTube Downloaders",
       "url": "https://youtube-downloaders.com",
@@ -17,7 +17,7 @@ function OrgnizationSchema() {
         "https://twitter.com/YourTwitterHandle",
         "https://www.facebook.com/YourFacebookPage",
         "https://www.linkedin.com/in/yourlinkedinprofile"
-      ]`
+      ]}
       )}
     </script>
 
