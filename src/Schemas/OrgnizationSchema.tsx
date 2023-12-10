@@ -27,7 +27,7 @@ function OrgnizationSchema() {
             addressLocality: "Multan",
             addressRegion: "Punjab",
             postalCode: "60000",
-            addressCountry: "Pakistan",
+            addressCountry: "PK",
           },
         })}
       </script>
