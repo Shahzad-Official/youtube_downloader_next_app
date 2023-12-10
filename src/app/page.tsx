@@ -1,11 +1,12 @@
 import HomePage from "@/components/Home/HomePage";
-import { Metadata } from "next";
-import Head from "next/head";
-import Image from "next/image";
+import FAQsSchema from "@/components/Schemas/FAQsSchema";
+import OrgnizationSchema from "@/components/Schemas/OrgnizationSchema";
 
 export default function Home() {
   return (
     <>
+    <FAQsSchema/>
+    <OrgnizationSchema/>
       <HomePage />
     </>
   );
