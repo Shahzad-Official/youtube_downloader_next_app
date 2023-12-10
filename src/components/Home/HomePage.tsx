@@ -172,11 +172,12 @@ function HomePage({
                           </td>
                           <td>{value.fileSize} mb</td>
                           {isMp3 ? null : (
-                            <DownloadButton
+                          <td>  <DownloadButton
                               fileName={`${data.videoId}.${value.extension}`}
                               url={value.url}
                               isMp3
                             />
+                            </td>
                           )}
 
                           <td>

@@ -102,9 +102,10 @@
   padding: 10px;
 }
 .optionsArea {
+  margin-left: 15px;
   display: flex;
   flex: 1;
-  /* background-color: red; */
+  overflow-x: auto;
 }
 @media screen and (max-width: 767px) {
   .h1 {
@@ -133,13 +134,16 @@
   .input {
     border-radius: 30px;
   }
+  .optionsArea{
+    margin-left: 0;
+  }
 }
 
 .myTable {
-  margin-left: 10px;
   width: 100%;
   height: fit-content;
   border-collapse: collapse;
+  overflow-x: scroll;
 }
 
 .myTable th,
