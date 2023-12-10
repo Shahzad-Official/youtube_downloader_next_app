@@ -6,8 +6,8 @@
     "dev": "next dev -p 4400",
     "build": "next build",
     "start": "next start -p 4400",
-    "pm2":"pm2 start npm --name 'youtube_downloader' -- start",
-    "kill":"pm2 delete youtube_downloader",
+    "pm2": "pm2 start npm --name 'youtube_downloader' -- start",
+    "kill": "pm2 delete youtube_downloader",
     "lint": "next lint"
   },
   "dependencies": {
@@ -24,6 +24,7 @@
     "react-spinners": "^0.13.8",
     "react-toastify": "^9.1.3",
     "react-use-downloader": "^1.2.4",
+    "sharp": "^0.33.0",
     "zustand": "^4.4.7"
   },
   "devDependencies": {
