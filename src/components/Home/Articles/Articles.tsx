@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./Articles.module.css";
 import step1 from "../../../../public/youtube_downloader_1.png";
-import step1_1 from "../../../../public/youtube_downloader_1_1.png";
+import step0 from "../../../../public/youtube_downloader_0.png";
 
 import step2 from "../../../../public/youtube_downloader_2.png";
-import step3 from "../../../../public/youtube_downloader_2.png";
+import step3 from "../../../../public/youtube_downloader_3.png";
 import Image from "next/image";
 import DownloadIcon from "@/svgIcons/DownloadIcon";
 import SecurityIcon from "@/svgIcons/SecurityIcon";
@@ -144,7 +144,7 @@ function Articles() {
                     <div className={styles.imageRow}>
                       <Image
                         className={styles.image}
-                        src={step1_1}
+                        src={step0}
                         alt={step.subHeading}
                       />
                       <Image
