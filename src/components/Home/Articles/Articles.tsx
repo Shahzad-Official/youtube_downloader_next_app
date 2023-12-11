@@ -184,7 +184,7 @@ function Articles() {
         <h2>Frequently Asked Questions (FAQ&apos;s)</h2>
         {faqs.map((item, index) => {
           return (
-            <div key={index}>
+            <div key={index} className={styles.faqPoint}>
               <h3>
                 {index + 1} . {item.heading}
               </h3>

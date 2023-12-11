@@ -19,8 +19,9 @@
 }
 .domainLink{
   color: var(--link-color);
+  font-weight: 600;
 }
-.link:hover {
+.link:hover, .domainLink:hover {
   color: var(--primary-color);
 }
 .copyText{

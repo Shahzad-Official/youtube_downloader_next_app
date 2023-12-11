@@ -12,7 +12,7 @@ function Footer() {
         <p>
           CopyRight &copy; {new Date().getFullYear()} &nbsp;
           <Link href={"/"} replace className={styles.domainLink}>
-            youtube-downloaders.com
+            Youtube Downloader
           </Link>
         </p>
 

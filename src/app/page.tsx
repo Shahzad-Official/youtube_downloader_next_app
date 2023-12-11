@@ -7,10 +7,10 @@ import HomePage from "@/components/Home/HomePage";
 export default function Home() {
   return (
     <>
-    <FAQsSchema/>
-    <OrgnizationSchema/>
-    <HowToSchema/>
-    <ServiceSchema/>
+      <FAQsSchema />
+      <OrgnizationSchema />
+      <HowToSchema />
+      <ServiceSchema />
       <HomePage />
     </>
   );
