@@ -5,16 +5,16 @@ import Drawer from "./Drawer/Drawer";
 import Helmet from "react-helmet";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import GTM from "@/utils/GTM";
+import Head from "next/head";
 
 interface LayoutProps {
   children: ReactNode;
 }
 
-function Layout({ children}: LayoutProps) {
+function Layout({ children }: LayoutProps) {
   return (
     <main>
-    <GTM/>
+      
       <Drawer />
       <Header />
       {children}
