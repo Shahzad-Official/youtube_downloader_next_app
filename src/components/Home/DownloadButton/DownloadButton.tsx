@@ -53,7 +53,6 @@ function DownloadButton({
             (receivedLength / contentLength) * 100
           );
           setProgress(downloadProgress);
-          console.log("Downloading => " + progress);
           downloadedChunks.push(new Uint8Array(value));
         }
 
