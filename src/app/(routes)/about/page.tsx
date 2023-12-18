@@ -1,20 +1,18 @@
-import Layout from "@/components/Layout/Layout";
+
 import React from "react";
 import styles from "./About.module.css";
 import { Metadata } from "next";
+import dynamic from "next/dynamic";
 export const metadata: Metadata = {
   title: "About Us - Youtube Downloader",
   description:
  "Meet our team behind the YouTube downloader. Learn about our values and commitment to easy video downloads. Discover the people making sure you enjoy your content.",
 };
-// export const metaData:Metadata={
-//   title:"About Us",
-//   description:"Meet the team of passionate individuals behind our cutting edge YouTube downloader. Discover our values and commitment to delivering a seamless experience for video downloads. Learn about the people that make sure your content is enjoyed.",
-// };
+const DynamicPage=dynamic(()=>import("@/components/Layout/Layout"));
 
 function About() {
   return (
-    <Layout>
+    <DynamicPage>
       <section className={styles.parent}>
         <h2>About Us</h2>
         <p>
@@ -102,7 +100,7 @@ function About() {
           </p>
         </div>
       </section>
-    </Layout>
+    </DynamicPage>
   );
 }
 
