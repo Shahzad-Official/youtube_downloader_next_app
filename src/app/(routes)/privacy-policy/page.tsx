@@ -1,13 +1,13 @@
-import Layout from "@/components/Layout/Layout";
 import React from "react";
 import styles from "./PrivacyPolicy.module.css";
 import { Metadata } from "next";
+import dynamic from "next/dynamic";
 export const metadata: Metadata = {
   title: "Privacy Policy - Youtube Downloader",
   description:
     "Explore our privacy policy for the YouTube Video Downloader, ensuring data security while downloading videos with user-friendly tools.",
 };
-
+const Layout = dynamic(() => import("@/components/Layout/Layout"));
 function PrivacyPolicy() {
   return (
     <Layout>

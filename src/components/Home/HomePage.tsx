@@ -1,6 +1,5 @@
 "use client";
 import React, { ReactNode, useEffect, useRef, useState } from "react";
-import Layout from "../Layout/Layout";
 import styles from "./Home.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -16,6 +15,7 @@ import AppColors from "@/utils/AppColors";
 import DownloadButton from "./DownloadButton/DownloadButton";
 import { toast } from "react-toastify";
 import Articles from "./Articles/Articles";
+import dynamic from "next/dynamic";
 interface HomeProps {
   isMp3?: boolean;
   isShort?: boolean;
@@ -23,7 +23,7 @@ interface HomeProps {
   children?: ReactNode;
   intro?:string;
 }
-
+const Layout=dynamic(()=>import("../Layout/Layout"));
 function HomePage({
   isMp3 = false,
   title,

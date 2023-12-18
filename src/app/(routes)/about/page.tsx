@@ -1,4 +1,3 @@
-
 import React from "react";
 import styles from "./About.module.css";
 import { Metadata } from "next";
@@ -6,13 +5,13 @@ import dynamic from "next/dynamic";
 export const metadata: Metadata = {
   title: "About Us - Youtube Downloader",
   description:
- "Meet our team behind the YouTube downloader. Learn about our values and commitment to easy video downloads. Discover the people making sure you enjoy your content.",
+    "Meet our team behind the YouTube downloader. Learn about our values and commitment to easy video downloads. Discover the people making sure you enjoy your content.",
 };
-const DynamicPage=dynamic(()=>import("@/components/Layout/Layout"));
+const Layout = dynamic(() => import("@/components/Layout/Layout"));
 
 function About() {
   return (
-    <DynamicPage>
+    <Layout>
       <section className={styles.parent}>
         <h2>About Us</h2>
         <p>
@@ -100,7 +99,7 @@ function About() {
           </p>
         </div>
       </section>
-    </DynamicPage>
+    </Layout>
   );
 }
 
