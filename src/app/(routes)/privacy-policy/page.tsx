@@ -1,6 +1,12 @@
 import Layout from "@/components/Layout/Layout";
 import React from "react";
 import styles from "./PrivacyPolicy.module.css";
+import { Metadata } from "next";
+
+export const metaData:Metadata={
+  title:"Privacy Policy",
+  description:"Learn about our Privacy Policy for the YouTube Video Downloader. We take your privacy seriously, ensuring your personal information is safe while you enjoy downloading videos. Understand our commitment to keeping your data secure as you use our simple and user-friendly tools.",
+};
 
 function PrivacyPolicy() {
   return (

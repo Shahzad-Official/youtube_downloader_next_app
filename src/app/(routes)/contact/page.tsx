@@ -6,6 +6,12 @@ import sendEmail from "@/services/api/sendEmail";
 import { PulseLoader } from "react-spinners";
 import AppColors from "@/utils/AppColors";
 import { toast } from "react-toastify";
+import { Metadata } from "next";
+
+export const metaData:Metadata={
+  title:"Contact Us",
+  description:"Get in touch with us for any questions or support regarding our YouTube Downloader. Contact our dedicated team to ensure a seamless experience in downloading and enjoying your favourite videos offline. Your feedback matters, and we're here to assist you on your journey with our user-friendly tools.",
+};
 
 function ContactUs() {
   const [isLoading, setLoading] = useState(false);
