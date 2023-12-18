@@ -1,14 +1,13 @@
+import Layout from "@/components/Layout/Layout";
 import React from "react";
 import styles from "./TermsOfUse.module.css";
 import { Metadata } from "next";
-import dynamic from "next/dynamic";
 export const metadata: Metadata = {
-  title: "Terms Of Use - Youtube Downloader",
-  description:
-    "Begin your journey with our YouTube Downloader—review our Terms of Use to optimize your experience with easy-to-use video downloading tools.",
-};
+  title: 'Terms Of Use - Youtube Downloader',
+  description:"Begin your journey with our YouTube Downloader—review our Terms of Use to optimize your experience with easy-to-use video downloading tools.",
+}
 
-const Layout = dynamic(() => import("@/components/Layout/Layout"));
+
 function TermsOfService() {
   return (
     <Layout>

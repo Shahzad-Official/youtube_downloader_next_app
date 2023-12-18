@@ -22,6 +22,16 @@ function Footer() {
       </div>
       <div className={styles.links}>
         <Link
+          href={"/faqs"}
+          onClick={() => {
+            changeIndex(99);
+          }}
+          className={` ${styles.link}`}
+          replace
+        >
+         FAQ&apos;s
+        </Link>
+        <Link
           href={"/terms-of-use"}
           onClick={() => {
             changeIndex(99);

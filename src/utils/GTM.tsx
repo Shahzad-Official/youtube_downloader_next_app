@@ -5,7 +5,7 @@ import Helmet from "react-helmet";
 export default function GTM() {
   return (
     <>
-      <Script
+      {/* <Script
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-ZKGYZD6BHP"
       ></Script>
@@ -16,7 +16,7 @@ export default function GTM() {
         gtag('js', new Date());
         gtag('config', 'G-ZKGYZD6BHP');
       `}
-      </Script>
+      </Script> */}
     </>
   );
 }

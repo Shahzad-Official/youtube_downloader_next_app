@@ -1,0 +1,16 @@
+.parent {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 70%;
+  align-self: center;
+}
+.faqPoint h3 {
+  text-align: justify;
+}
+@media screen and (max-width: 767px) {
+    .parent {
+      width: 90%;
+    }
+  }
+  

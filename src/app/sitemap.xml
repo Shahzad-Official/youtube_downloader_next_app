@@ -9,6 +9,10 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://youtube-downloaders.com/faqs</loc>
+        <priority>0.5</priority>
+    </url>
+    <url>
         <loc>https://youtube-downloaders.com/contact</loc>
         <priority>0.6</priority>
     </url>

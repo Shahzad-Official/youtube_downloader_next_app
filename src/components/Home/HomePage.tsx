@@ -16,6 +16,7 @@ import DownloadButton from "./DownloadButton/DownloadButton";
 import { toast } from "react-toastify";
 import Articles from "./Articles/Articles";
 import dynamic from "next/dynamic";
+import Layout from "../Layout/Layout";
 interface HomeProps {
   isMp3?: boolean;
   isShort?: boolean;
@@ -23,10 +24,9 @@ interface HomeProps {
   children?: ReactNode;
   intro?:string;
 }
-const Layout=dynamic(()=>import("../Layout/Layout"));
 function HomePage({
   isMp3 = false,
-  title,
+  title="Youtube Downloader",
   isShort = false,
   children,
   intro,
@@ -91,7 +91,7 @@ function HomePage({
       <div className={styles.parent}>
         <div className={styles.home}>
           <span className="mt-5" />
-          <h1 className={styles.h1}>{title ?? "YouTube Downloader"}</h1>
+          <h1 className={styles.h1}>{title}</h1>
           <div className={styles.searchSection}>
             <div className={styles.searchArea}>
               <div className={styles.inputArea}>
@@ -139,6 +139,7 @@ function HomePage({
             <div className={styles.downloadOptions}>
               <div className={styles.imageArea}>
                 <Image
+                loading="lazy"
                   width={100}
                   height={100}
                   className={styles.image}

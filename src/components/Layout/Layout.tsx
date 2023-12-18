@@ -13,7 +13,7 @@ interface LayoutProps {
 function Layout({ children }: LayoutProps) {
   return (
     <main>
-      <GTM/>
+      {/* <GTM/> */}
       <Drawer />
       <Header />
       {children}
