@@ -200,7 +200,7 @@ function HomePage({
           <span className="mt-5" />
         </div>
         {children}
-        <Articles />
+        <Articles intro={intro} title={title}/>
       </div>
     </Layout>
   );

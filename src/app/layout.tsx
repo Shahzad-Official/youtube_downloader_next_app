@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Youtube Downloader',
-  description:"Visit our site to discover the best YouTube downloader! Download YouTube videos without any hassle, convert them into MP3, or grab clips. Discover the powerful features of our easy-to-use platform. Enjoy content without hassle with our one-stop-shop solution!",
+  description:"Visit our site to discover the best YouTube downloader! Easily download videos, convert to MP3, and grab clips for hassle-free content enjoyment on our user-friendly platform!",
   keywords:"free youtube video downloader,downloader for youtube , youtube downloader , youtube video downloader ,youtube mp3 downloader ,youtube video converter,youtube downloader online, youtube short downloader , video downloader for youtube videos ",
 }
 
