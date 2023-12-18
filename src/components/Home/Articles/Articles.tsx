@@ -13,7 +13,7 @@ import InfinityIcon from "@/svgIcons/InfinityIcon";
 import ConverterIcon from "@/svgIcons/ConverterIcon";
 import MobileIcon from "@/svgIcons/MobileIcon";
 
-function Articles() {
+function Articles({intro}:{intro?:string}) {
   const steps = [
     {
       subHeading: "Copy and Paste the Video URL",
@@ -118,17 +118,9 @@ function Articles() {
       <section>
         <h2>Best Online Youtube Downloader</h2>
         <p>
-          Get videos, shorts, and audio for free with our YouTube downloader.
-          You&apos;re in the right spot. We provide a wide range of services for
-          downloading free YouTube videos, shorts, and various audio types in
-          different resolutions. YouTube is evolving continuously, especially
-          with the rise of &quot;shorts.&quot; They&apos;re super popular, and
-          YouTube made a special feature just for them. This tool saves these
-          YouTube videos and short videos for offline watching. For teachers and
-          students, this free downloader is a big help, making it obvious that
-          internet issues don&apos;t stop learning. If you love learning,
-          teaching, or just enjoying uninterrupted YouTube time, YouTube video
-          downloader is for you. Why? Because it&apos;s free to use!
+          {
+            intro ??`Get videos, shorts, and audio for free with our YouTube downloader. You're in the right spot. We provide a wide range of services for downloading free YouTube videos, shorts, and various audio types in different resolutions.YouTube is  evolving continuously, especially with the rise of "shorts." They're super popular, and YouTube made a special feature just for them. This tool saves these YouTube videos and short videos for offline watching. For teachers and students, this free downloader is a big help, making it obvious that internet issues don't stop learning.If you love learning, teaching, or just enjoying uninterrupted YouTube time, YouTube video downloader is for you. Why? Because it's free to use!`
+          }
         </p>
       </section>
       <section className={styles.howToDownload}>

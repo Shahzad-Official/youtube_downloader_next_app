@@ -21,6 +21,7 @@ interface HomeProps {
   isShort?: boolean;
   title?: string;
   children?: ReactNode;
+  intro?:string;
 }
 
 function HomePage({
@@ -28,6 +29,7 @@ function HomePage({
   title,
   isShort = false,
   children,
+  intro,
 }: HomeProps) {
   const [data, setData] = useState<YoutubeModel | undefined | null>(null);
   const [isLoading, setLoading] = useState(false);
