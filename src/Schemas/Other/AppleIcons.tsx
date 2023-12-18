@@ -9,13 +9,13 @@ function AppleIcons() {
         <link
           rel="apple-touch-icon"
           sizes="120x120"
-          href="/apple-touch-icon-120x120-precomposed.png"
+          href="https://youtube-downloaders.com/apple-touch-icon-120x120-precomposed.png"
         />
 
         <link
           rel="apple-touch-icon"
           sizes="152x152"
-          href="/apple-touch-icon-152x152-precomposed.png"
+          href="https://youtube-downloaders.com/apple-touch-icon-152x152-precomposed.png"
         />
       </Helmet>
     </div>
