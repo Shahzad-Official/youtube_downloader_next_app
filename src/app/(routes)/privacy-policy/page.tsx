@@ -2,10 +2,10 @@ import Layout from "@/components/Layout/Layout";
 import React from "react";
 import styles from "./PrivacyPolicy.module.css";
 import { Metadata } from "next";
-
-export const metaData:Metadata={
-  title:"Privacy Policy",
-  description:"Learn about our Privacy Policy for the YouTube Video Downloader. We take your privacy seriously, ensuring your personal information is safe while you enjoy downloading videos. Understand our commitment to keeping your data secure as you use our simple and user-friendly tools.",
+export const metadata: Metadata = {
+  title: "Privacy Policy - Youtube Downloader",
+  description:
+    "Learn about our Privacy Policy for the YouTube Video Downloader. We take your privacy seriously, ensuring your personal information is safe while you enjoy downloading videos. Understand our commitment to keeping your data secure as you use our simple and user-friendly tools.",
 };
 
 function PrivacyPolicy() {
@@ -63,20 +63,51 @@ function PrivacyPolicy() {
           <li>Sending occasional emails related to our services</li>
         </ul>
         <h3>Cookies</h3>
-        <p>Hey! We&apos;re here to make your time on our website awesome. We use cookies, which are little helpers storing info on your device. Feel free to turn them off in your browser settings, but keep in mind it might change up some features on our site. Cheers! 🌟</p>
+        <p>
+          Hey! We&apos;re here to make your time on our website awesome. We use
+          cookies, which are little helpers storing info on your device. Feel
+          free to turn them off in your browser settings, but keep in mind it
+          might change up some features on our site. Cheers! 🌟
+        </p>
         <h3>Third-Party Disclosure</h3>
-        <p>We don&apos;t sell, trade, or give away your info. But we might share some non-personal stuff with our trusted friends for things like ads and marketing. Sounds good?</p>
+        <p>
+          We don&apos;t sell, trade, or give away your info. But we might share
+          some non-personal stuff with our trusted friends for things like ads
+          and marketing. Sounds good?
+        </p>
         <h3>Data Security</h3>
-        <p>While we implement security measures to protect your information, we can&apos;t guarantee absolute security. No method of transmission over the internet or electronic storage is entirely secure. For added security:</p>
+        <p>
+          While we implement security measures to protect your information, we
+          can&apos;t guarantee absolute security. No method of transmission over
+          the internet or electronic storage is entirely secure. For added
+          security:
+        </p>
         <ul>
-          <li>Your personal information is encrypted during transmission using SSL technology.</li>
-          <li>We regularly review our information collection, storage, and processing practices to guard against unauthorised access.</li>
+          <li>
+            Your personal information is encrypted during transmission using SSL
+            technology.
+          </li>
+          <li>
+            We regularly review our information collection, storage, and
+            processing practices to guard against unauthorised access.
+          </li>
         </ul>
         <h3>Links to Third-Party Websites</h3>
-        <p>Quick note: our website links to other sites, and they have their privacy policy. We&apos;re not calling the shots on what they&apos;re up to.</p>
-        <p>For any questions or concerns regarding this Privacy Policy, feel free to reach out to us at <strong>bytestechsol@gmail.com</strong>. Thanks for being part of the YouTube Downloaders community!</p>
+        <p>
+          Quick note: our website links to other sites, and they have their
+          privacy policy. We&apos;re not calling the shots on what they&apos;re
+          up to.
+        </p>
+        <p>
+          For any questions or concerns regarding this Privacy Policy, feel free
+          to reach out to us at <strong>bytestechsol@gmail.com</strong>. Thanks
+          for being part of the YouTube Downloaders community!
+        </p>
         <h3>Contact Us</h3>
-        <p>If you have any questions or concerns about our Privacy Policy, please contact us at <strong> bytestechsol@gmail.com.</strong></p>
+        <p>
+          If you have any questions or concerns about our Privacy Policy, please
+          contact us at <strong> bytestechsol@gmail.com.</strong>
+        </p>
       </section>
     </Layout>
   );

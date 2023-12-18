@@ -2,11 +2,11 @@ import Layout from "@/components/Layout/Layout";
 import React from "react";
 import styles from "./TermsOfUse.module.css";
 import { Metadata } from "next";
-
-export const metaData:Metadata={
-  title:"Terms Of Use",
+export const metadata: Metadata = {
+  title: 'Terms Of Use - Youtube Downloader',
   description:"Start your journey with our YouTube Downloader by reviewing the Terms of Use. Familiarise yourself with the guidelines to optimise your experience with our easy-to-use video downloading tools.",
-};
+}
+
 
 function TermsOfService() {
   return (

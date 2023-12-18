@@ -2,11 +2,15 @@ import Layout from "@/components/Layout/Layout";
 import React from "react";
 import styles from "./About.module.css";
 import { Metadata } from "next";
-
-export const metaData:Metadata={
-  title:"About Us",
-  description:"Meet the team of passionate individuals behind our cutting edge YouTube downloader. Discover our values and commitment to delivering a seamless experience for video downloads. Learn about the people that make sure your content is enjoyed.",
+export const metadata: Metadata = {
+  title: "About Us - Youtube Downloader",
+  description:
+ "Meet the team of passionate individuals behind our cutting edge YouTube downloader. Discover our values and commitment to delivering a seamless experience for video downloads. Learn about the people that make sure your content is enjoyed.",
 };
+// export const metaData:Metadata={
+//   title:"About Us",
+//   description:"Meet the team of passionate individuals behind our cutting edge YouTube downloader. Discover our values and commitment to delivering a seamless experience for video downloads. Learn about the people that make sure your content is enjoyed.",
+// };
 
 function About() {
   return (
