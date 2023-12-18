@@ -4,7 +4,7 @@ import styles from "./TermsOfUse.module.css";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: 'Terms Of Use - Youtube Downloader',
-  description:"Start your journey with our YouTube Downloader by reviewing the Terms of Use. Familiarise yourself with the guidelines to optimise your experience with our easy-to-use video downloading tools.",
+  description:"Begin your journey with our YouTube Downloader—review our Terms of Use to optimize your experience with easy-to-use video downloading tools.",
 }
 
 

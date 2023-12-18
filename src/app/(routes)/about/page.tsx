@@ -5,7 +5,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Us - Youtube Downloader",
   description:
- "Meet the team of passionate individuals behind our cutting edge YouTube downloader. Discover our values and commitment to delivering a seamless experience for video downloads. Learn about the people that make sure your content is enjoyed.",
+ "Meet our team behind the YouTube downloader. Learn about our values and commitment to easy video downloads. Discover the people making sure you enjoy your content.",
 };
 // export const metaData:Metadata={
 //   title:"About Us",

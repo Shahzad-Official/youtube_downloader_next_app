@@ -5,7 +5,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy - Youtube Downloader",
   description:
-    "Learn about our Privacy Policy for the YouTube Video Downloader. We take your privacy seriously, ensuring your personal information is safe while you enjoy downloading videos. Understand our commitment to keeping your data secure as you use our simple and user-friendly tools.",
+    "Explore our privacy policy for the YouTube Video Downloader, ensuring data security while downloading videos with user-friendly tools.",
 };
 
 function PrivacyPolicy() {
