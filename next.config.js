@@ -1,13 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode:false,
-  optimizeFonts:true,
+  reactStrictMode: false,
+  optimizeFonts: true,
 
-    images: {
-        domains: ['i.ytimg.com'], 
-      
-      },
-  
-}
+  images: {
+    domains: ["i.ytimg.com"],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

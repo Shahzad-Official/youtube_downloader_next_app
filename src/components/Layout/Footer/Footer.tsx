@@ -29,7 +29,7 @@ function Footer() {
           className={` ${styles.link}`}
           replace
         >
-         FAQ&apos;s
+          FAQ&apos;s
         </Link>
         <Link
           href={"/terms-of-use"}

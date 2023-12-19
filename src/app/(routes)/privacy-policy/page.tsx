@@ -2,6 +2,7 @@ import Layout from "@/components/Layout/Layout";
 import React from "react";
 import styles from "./PrivacyPolicy.module.css";
 import { Metadata } from "next";
+import CustomHead from "@/Schemas/Other/CustomOgHead";
 export const metadata: Metadata = {
   title: "Privacy Policy - Youtube Downloader",
   description:
@@ -11,8 +12,13 @@ export const metadata: Metadata = {
 function PrivacyPolicy() {
   return (
     <Layout>
+      <CustomHead
+        description={metadata.description || ""}
+        pageUrl="https://youtube-downloaders.com/privacy-policy/"
+        title={metadata.title?.toString() ?? ""}
+      />
       <section className={styles.parent}>
-        <h2>Privacy Policy</h2>
+        <h1>Privacy Policy</h1>
         <p>
           Privacy Policy Last Updated: <strong>December 10, 2023</strong>
         </p>
@@ -30,8 +36,8 @@ function PrivacyPolicy() {
           essentially giving us the green light to the terms outlined in this
           Privacy Policy. Sounds good? Awesome!
         </p>
-        <h3>Information We Collect</h3>
-        <h4>Personal Information</h4>
+        <h2>Information We Collect</h2>
+        <h3>Personal Information</h3>
         <p>
           We may collect some personal information when you willingly provide
           it, such as:
@@ -41,7 +47,7 @@ function PrivacyPolicy() {
           This information is gathered through forms on our website or when you
           use specific services.
         </p>
-        <h4>Non-Personal Information</h4>
+        <h3>Non-Personal Information</h3>
         <p>
           We also collect non-personal information for statistical purposes and
           to improve your experience. This includes:
@@ -52,7 +58,7 @@ function PrivacyPolicy() {
           <li>IP address</li>
           <li>Date and time of access</li>
         </ul>
-        <h3>How We Use Your Information</h3>
+        <h2>How We Use Your Information</h2>
         <p>
           We put the gathered information to use for different reasons, such as:
         </p>
@@ -62,20 +68,20 @@ function PrivacyPolicy() {
           <li>Responding to your inquiries</li>
           <li>Sending occasional emails related to our services</li>
         </ul>
-        <h3>Cookies</h3>
+        <h2>Cookies</h2>
         <p>
           Hey! We&apos;re here to make your time on our website awesome. We use
           cookies, which are little helpers storing info on your device. Feel
           free to turn them off in your browser settings, but keep in mind it
           might change up some features on our site. Cheers! 🌟
         </p>
-        <h3>Third-Party Disclosure</h3>
+        <h2>Third-Party Disclosure</h2>
         <p>
           We don&apos;t sell, trade, or give away your info. But we might share
           some non-personal stuff with our trusted friends for things like ads
           and marketing. Sounds good?
         </p>
-        <h3>Data Security</h3>
+        <h2>Data Security</h2>
         <p>
           While we implement security measures to protect your information, we
           can&apos;t guarantee absolute security. No method of transmission over
@@ -92,7 +98,7 @@ function PrivacyPolicy() {
             processing practices to guard against unauthorised access.
           </li>
         </ul>
-        <h3>Links to Third-Party Websites</h3>
+        <h2>Links to Third-Party Websites</h2>
         <p>
           Quick note: our website links to other sites, and they have their
           privacy policy. We&apos;re not calling the shots on what they&apos;re
@@ -103,7 +109,7 @@ function PrivacyPolicy() {
           to reach out to us at <strong>bytestechsol@gmail.com</strong>. Thanks
           for being part of the YouTube Downloaders community!
         </p>
-        <h3>Contact Us</h3>
+        <h2>Contact Us</h2>
         <p>
           If you have any questions or concerns about our Privacy Policy, please
           contact us at <strong> bytestechsol@gmail.com.</strong>

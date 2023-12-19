@@ -7,7 +7,7 @@
   background-color: var(--footer-color);
   overflow-x: scroll;
 }
-.links{
+.links {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -19,47 +19,48 @@
   color: var(--link-color);
   margin-right: 15px;
 }
-.domainLink{
+.domainLink {
   color: var(--link-color);
   font-weight: 600;
 }
-.link:hover, .domainLink:hover {
+.link:hover,
+.domainLink:hover {
   color: var(--primary-color);
 }
-.copyText{
+.copyText {
   display: flex;
   flex-direction: row;
 }
-.hide{
+.hide {
   display: flex;
 }
 @media screen and (max-width: 767px) {
-  .hide{
+  .hide {
     display: none;
   }
-  .copyText{
+  .copyText {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: 14px;
   }
-  .link{
+  .link {
     margin-right: 12px;
     font-size: 14px;
   }
-  .domainLink{
+  .domainLink {
     font-size: 14px;
   }
 }
-@media screen and (max-width:400px) {
-  .link{
+@media screen and (max-width: 400px) {
+  .link {
     margin-right: 8px;
     font-size: 12px;
   }
-  .copyText{
+  .copyText {
     font-size: 12px;
   }
-  .domainLink{
+  .domainLink {
     font-size: 12px;
   }
 }

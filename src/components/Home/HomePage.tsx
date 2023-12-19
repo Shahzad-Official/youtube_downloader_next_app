@@ -22,11 +22,11 @@ interface HomeProps {
   isShort?: boolean;
   title?: string;
   children?: ReactNode;
-  intro?:string;
+  intro?: string;
 }
 function HomePage({
   isMp3 = false,
-  title="Youtube Downloader",
+  title = "Youtube Downloader",
   isShort = false,
   children,
   intro,
@@ -139,7 +139,7 @@ function HomePage({
             <div className={styles.downloadOptions}>
               <div className={styles.imageArea}>
                 <Image
-                loading="lazy"
+                  loading="lazy"
                   width={100}
                   height={100}
                   className={styles.image}
@@ -175,11 +175,13 @@ function HomePage({
                           </td>
                           <td>{value.fileSize} mb</td>
                           {isMp3 ? null : (
-                          <td>  <DownloadButton
-                              fileName={`${data.videoId}.${value.extension}`}
-                              url={value.url}
-                              isMp3
-                            />
+                            <td>
+                              {" "}
+                              <DownloadButton
+                                fileName={`${data.videoId}.${value.extension}`}
+                                url={value.url}
+                                isMp3
+                              />
                             </td>
                           )}
 
@@ -201,7 +203,7 @@ function HomePage({
           <span className="mt-5" />
         </div>
         {children}
-        <Articles intro={intro} title={title}/>
+        <Articles intro={intro} title={title} />
       </div>
     </Layout>
   );

@@ -5,12 +5,11 @@
   width: 70%;
   align-self: center;
 }
-.faqPoint h3 {
+.faqPoint h2 {
   text-align: justify;
 }
 @media screen and (max-width: 767px) {
-    .parent {
-      width: 90%;
-    }
+  .parent {
+    width: 90%;
   }
-  
+}

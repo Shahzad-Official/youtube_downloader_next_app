@@ -70,7 +70,7 @@ function Articles({ intro, title }: { intro?: string; title?: string }) {
       icon: <ConverterIcon />,
     },
   ];
-  
+
   return (
     <div className={styles.parent}>
       <section>
@@ -129,7 +129,6 @@ function Articles({ intro, title }: { intro?: string; title?: string }) {
           );
         })}
       </section>
-      
     </div>
   );
 }

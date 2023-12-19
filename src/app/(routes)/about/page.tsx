@@ -2,21 +2,23 @@ import Layout from "@/components/Layout/Layout";
 import React from "react";
 import styles from "./About.module.css";
 import { Metadata } from "next";
+import CustomHead from "@/Schemas/Other/CustomOgHead";
 export const metadata: Metadata = {
   title: "About Us - Youtube Downloader",
   description:
- "Meet our team behind the YouTube downloader. Learn about our values and commitment to easy video downloads. Discover the people making sure you enjoy your content.",
+    "Meet our team behind the YouTube downloader. Learn about our values and commitment to easy video downloads. Discover the people making sure you enjoy your content.",
 };
-// export const metaData:Metadata={
-//   title:"About Us",
-//   description:"Meet the team of passionate individuals behind our cutting edge YouTube downloader. Discover our values and commitment to delivering a seamless experience for video downloads. Learn about the people that make sure your content is enjoyed.",
-// };
 
 function About() {
   return (
     <Layout>
+      <CustomHead
+        description={metadata.description || ""}
+        pageUrl="https://youtube-downloaders.com/about/"
+        title={metadata.title?.toString() ?? ""}
+      />
       <section className={styles.parent}>
-        <h2>About Us</h2>
+        <h1>About Us</h1>
         <p>
           Welcome to YouTube Downloaders, the ultimate platform for seamless
           video downloads from the world&apos;s largest video-sharing platform.
@@ -25,8 +27,8 @@ function About() {
           is to provide a user-friendly and reliable solution for users, who
           want to effortlessly download YouTube videos.
         </p>
-        <h3>Our Services</h3>
-        <h4>1. YouTube Downloader Suite:</h4>
+        <h2>Our Services</h2>
+        <h3>1. YouTube Downloader Suite:</h3>
         <p>
           Explore the incredible possibilities with our YouTube Downloader
           Suite! Whether you&apos;re seeking high-definition video downloads
@@ -35,7 +37,7 @@ function About() {
           visual quality and a convenient solution for enjoying your favourite
           content.
         </p>
-        <h4>2. Multimedia Conversion Hub:</h4>
+        <h3>2. Multimedia Conversion Hub:</h3>
         <p>
           Dive into the latest trends and unlock content versatility with our
           Multimedia Conversion Hub. From capturing engaging short videos using
@@ -46,7 +48,7 @@ function About() {
           YouTube Downloader Online MP4, ensuring quick and efficient downloads
           in the widely compatible MP4 format.
         </p>
-        <h3>Our Vision</h3>
+        <h2>Our Vision</h2>
         <p>
           We imagine a digital world where users have the freedom to enjoy their
           favourite content on their own terms. At YouTube Downloaders,
@@ -57,45 +59,45 @@ function About() {
           robust tool that elevates their overall video-watching experience.
         </p>
         <div className={styles.keyFeatures}>
-          <h3>Key Features</h3>
-          <h4>User-Friendly Interface:</h4>
+          <h2>Key Features</h2>
+          <h3>User-Friendly Interface:</h3>
           <p>
             Our intuitive interface ensures that downloading YouTube videos is a
             straightforward process for users of all levels of technical
             expertise.
           </p>
-          <h4>High-Quality Downloads:</h4>
+          <h3>High-Quality Downloads:</h3>
           <p>
             Enjoy your favourite videos in the best quality available. YouTube
             Downloader supports various resolutions, including HD , so you can
             savour every detail.
           </p>
-          <h4>Fast and Efficient:</h4>
+          <h3>Fast and Efficient:</h3>
           <p>
             We understand that your time is valuable. Our downloader is
             optimised for speed, ensuring a swift downloading process without
             compromising on the quality of the videos.
           </p>
-          <h4>Versatility:</h4>
+          <h3>Versatility:</h3>
           <p>
             YouTube Downloader is not limited to just video downloads. Users can
             also extract audio from videos in various formats, allowing them to
             create customized playlists.
           </p>
-          <h4>Safe and Secure:</h4>
+          <h3>Safe and Secure:</h3>
           <p>
             Here at YouTube Downloaders, your privacy and security are our top
             concerns. We follow the highest security standards, ensuring a safe
             environment for everyone using our platform.
           </p>
-          <h4>Paste URL:</h4>
+          <h3>Paste URL:</h3>
           <p> Copy the YouTube video URL and paste it into our downloader.</p>
-          <h4>Choose Format and Quality:</h4>
+          <h3>Choose Format and Quality:</h3>
           <p>
             Select your preferred video or audio format along with the desired
             quality.
           </p>
-          <h4>Download:</h4>
+          <h3>Download:</h3>
           <p>
             Click the download button, and just in moments, your content will be
             ready for offline enjoyment.

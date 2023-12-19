@@ -7,7 +7,6 @@ import { PulseLoader } from "react-spinners";
 import AppColors from "@/utils/AppColors";
 import { toast } from "react-toastify";
 
-
 function ContactUs() {
   const [isLoading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
