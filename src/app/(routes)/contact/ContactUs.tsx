@@ -6,6 +6,7 @@ import sendEmail from "@/services/api/sendEmail";
 import { PulseLoader } from "react-spinners";
 import AppColors from "@/utils/AppColors";
 import { toast } from "react-toastify";
+import Link from "next/link";
 
 function ContactUs() {
   const [isLoading, setLoading] = useState(false);
@@ -66,6 +67,13 @@ function ContactUs() {
       <div className={styles.parentContainer}>
         <div className={styles.parent}>
           <h1>Contact Us</h1>
+          <p>
+            Thank you for visiting<Link href={"/"} replace>YouTube Downloaders</Link>!  We appreciate your
+            interest in our website. If you have any questions, suggestions, or
+            concerns, please feel free to reach out to us using the contact form
+            below. Your feedback is valuable to us, and we will do our best to
+            respond to your inquiry promptly.
+          </p>
           <form
             className={styles.form}
             onSubmit={isLoading ? (e) => {} : handleSubmit}
@@ -137,6 +145,17 @@ function ContactUs() {
               )}
             </button>
           </form>
+          <p>
+            Please ensure that all the information provided is accurate so that
+            we can assist you effectively. We look forward to hearing from you
+            and thank you for choosing YouTube Downloaders.
+            <br />
+            <br />
+            Best regards,
+            <br />
+            <br />
+            The YouTube Downloaders Team
+          </p>
         </div>
       </div>
     </Layout>

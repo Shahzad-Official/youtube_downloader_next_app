@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import Head from "next/head";
 import React from "react";
 export const metadata: Metadata = {
-  title: 'Youtube Shorts Downloader',
+  title: 'Youtube Shorts Downloader | Download youtube shorts free online ',
   description:"Maximize YouTube Shorts with our pro downloader. Instantly download trending videos, stay ahead, and captivate your audience like never before.",
 }
 function YoutubeShorts() {

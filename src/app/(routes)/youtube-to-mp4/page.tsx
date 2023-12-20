@@ -3,7 +3,7 @@ import HomePage from "@/components/Home/HomePage";
 import { Metadata } from "next";
 import React from "react";
 export const metadata: Metadata = {
-  title: "Youtube Video Downloader",
+  title: "Youtube Video Downloader | Download high quality youtube videos online",
   description:
     "Experience the remarkable power of Youtube to mp4 conversion with our free converter. Say goodbye to buffering and enjoy high-quality videos wherever you want.",
 };
