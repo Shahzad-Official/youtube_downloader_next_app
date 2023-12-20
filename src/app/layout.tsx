@@ -8,7 +8,7 @@ config.autoAddCss = false;
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Youtube Downloader | Download high quality youtube videos and also convert them in mp3",
+  title: "Youtube Downloader | Download high quality youtube videos ",
   description:
     "Explore our site for the top YouTube downloader! Download videos, convert to MP3, and enjoy hassle-free content on our user-friendly platform!",
   keywords:
