@@ -24,7 +24,6 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="canonical" href="https://youtube-downloaders.com/" />
-        <meta name="robots" content="noindex"></meta>
       </head>
       <body className={inter.className}>{children}</body>
     </html>
