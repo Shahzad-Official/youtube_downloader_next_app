@@ -9,11 +9,12 @@ export default async function fetchData({
   isMp3?: boolean;
 }) {
   try {
-    const response = await fetch("https://youtube-downloaders.com/api/yt", {
+    const response = await fetch("http://api.youtube-downloaders.com/api/yt", {
       cache:"no-cache",
       method: "post",
       headers: {
         "Content-Type": "application/json",
+        "x-api-key":"youtube_downloader_key",
       },
       body: JSON.stringify({
         url: url,
@@ -22,9 +23,11 @@ export default async function fetchData({
     });
 
     const data = await response.json();
+    console.log("Video data => ", data);
     return data;
     
   } catch (err) {
     console.log(err);
+    
   }
 }

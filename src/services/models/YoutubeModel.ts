@@ -1,4 +1,6 @@
 export interface YoutubeModel {
+  hasError:boolean
+  message:string
   videoId: string
   title: string
   thumbnail: string

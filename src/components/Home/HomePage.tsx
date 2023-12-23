@@ -69,6 +69,7 @@ function HomePage({
         });
         setData(responseData);
         setLoading(false);
+        
       } catch (err) {
         setLoading(false);
         console.log(err);
@@ -86,6 +87,16 @@ function HomePage({
   useEffect(() => {
     setData(data);
   }, [data]);
+
+useEffect(()=>{
+  if (data?.hasError) {
+    toast(data?.message, {
+      position: "top-center",
+      type: "error",
+    });
+  }
+},[data?.hasError, data?.message]);
+
   return (
     <Layout>
       <div className={styles.parent}>
@@ -131,7 +142,7 @@ function HomePage({
             </div>
           </div>
 
-          {data == null || data === undefined ? (
+          {data == null || data === undefined || data.hasError ? (
             <div />
           ) : isLoading ? (
             <HashLoader color={AppColors.primaryColor} />
@@ -159,42 +170,46 @@ function HomePage({
                     </tr>
                   </thead>
                   <tbody>
-                    {data.formats.map((value, index) => {
-                      return (
-                        <tr key={index}>
-                          <td>
-                            (.{value.extension}) &nbsp;{value.quality} &nbsp;
-                            {isMp3 || value.hasAudio ? (
-                              <span />
-                            ) : (
-                              <FontAwesomeIcon
-                                color={AppColors.primaryColor}
-                                icon={faVolumeXmark}
-                              />
-                            )}
-                          </td>
-                          <td>{value.fileSize} mb</td>
-                          {isMp3 ? null : (
+                    {data === null || data === undefined || data.hasError ? (
+                      <div />
+                    ) : (
+                      data.formats.map((value, index) => {
+                        return (
+                          <tr key={index}>
                             <td>
-                              {" "}
+                              (.{value.extension}) &nbsp;{value.quality} &nbsp;
+                              {isMp3 || value.hasAudio ? (
+                                <span />
+                              ) : (
+                                <FontAwesomeIcon
+                                  color={AppColors.primaryColor}
+                                  icon={faVolumeXmark}
+                                />
+                              )}
+                            </td>
+                            <td>{value.fileSize} mb</td>
+                            {isMp3 ? null : (
+                              <td>
+                                {" "}
+                                <DownloadButton
+                                  fileName={`${data.videoId}.${value.extension}`}
+                                  url={value.url}
+                                  isMp3
+                                />
+                              </td>
+                            )}
+
+                            <td>
                               <DownloadButton
-                                fileName={`${data.videoId}.${value.extension}`}
                                 url={value.url}
-                                isMp3
+                                fileName={`${data.videoId}.${value.extension}`}
+                                isMp3={isMp3}
                               />
                             </td>
-                          )}
-
-                          <td>
-                            <DownloadButton
-                              url={value.url}
-                              fileName={`${data.videoId}.${value.extension}`}
-                              isMp3={isMp3}
-                            />
-                          </td>
-                        </tr>
-                      );
-                    })}
+                          </tr>
+                        );
+                      })
+                    )}
                   </tbody>
                 </table>
               </div>
