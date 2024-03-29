@@ -30,6 +30,7 @@ function DownloadButton({
             method: "post",
             headers: {
               "Content-Type": "application/json",
+              "x-api-key": "youtube_downloader_key",
             },
             body: JSON.stringify({
               url: url,
