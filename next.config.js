@@ -2,9 +2,10 @@
 const nextConfig = {
   reactStrictMode: false,
   optimizeFonts: true,
-
+  output: "export",
   images: {
     domains: ["i.ytimg.com"],
+    unoptimized: true,
   },
 };
 

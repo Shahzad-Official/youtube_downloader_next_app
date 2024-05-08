@@ -12,6 +12,7 @@ import LaunchIcon from "@/svgIcons/LaunchIcon";
 import InfinityIcon from "@/svgIcons/InfinityIcon";
 import ConverterIcon from "@/svgIcons/ConverterIcon";
 import MobileIcon from "@/svgIcons/MobileIcon";
+import Banner from "@/components/ads/ad_cmpt";
 
 function Articles({ intro, title }: { intro?: string; title?: string }) {
   var introText = `Get videos, shorts, and audio for free with our YouTube downloader. You're in the right spot. We provide a wide range of services for downloading free YouTube videos, shorts, and various audio types in different resolutions.YouTube is  evolving continuously, especially with the rise of "shorts." They're super popular, and YouTube made a special feature just for them. This tool saves these YouTube videos and short videos for offline watching. For teachers and students, this free downloader is a big help, making it obvious that internet issues don't stop learning.If you love learning, teaching, or just enjoying uninterrupted YouTube time, YouTube video downloader is for you. Why? Because it's free to use!`;
@@ -73,6 +74,7 @@ function Articles({ intro, title }: { intro?: string; title?: string }) {
 
   return (
     <div className={styles.parent}>
+      <Banner/>
       <section>
         <h2>Best Online Youtube Downloader</h2>
         <p>{intro || introText}</p>
